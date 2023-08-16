@@ -1,5 +1,32 @@
 # REACT CONTEXT
 
+This project combines different components to create a React application. These components encompass functionalities such as page navigation, user session management, and API calls. Below are the descriptions of the components:
+
+## About Component
+
+**About** represents the "About Us" page. It utilizes Bootstrap components to create the page content. The page is divided into three different sections: "Online Courses," "Full-time Mentoring," and "Learn Yourself."
+
+## Login Component
+
+**Login** represents a page where users can log in. It uses the `useContext` hook to consume the `LoginContext` context and fetches the user's email and password information from this context. The `setUser` function is used to update user information. Page navigation is achieved using the `useNavigate` hook.
+
+## People Component
+
+**People** lists user data by fetching it from an API. It utilizes the `useState` hook to store user data and the `useEffect` hook to fetch this data when the component is first loaded. Clickable links are added for each listed user. Clicking these links triggers navigation to the individual's detail page using the `useNavigate` hook.
+
+## PersonDetail Component
+
+**PersonDetail** represents a page that displays detailed information about users. The `useParams` hook is used to retrieve URL parameters and fetch data for a specific user from an API. The component handles error scenarios and data loading status. "Go Home" and "Go Back" buttons on the user detail page enable page navigation.
+
+## PrivateRouter Component
+
+**PrivateRouter** secures private pages based on the user's session status. It consumes the `LoginContext` context using the `useContext` hook and checks whether the user has logged in. If the user is logged in, the content is displayed using `<Outlet />`; otherwise, the user is redirected to the login page using the `useNavigate` hook.
+
+These components come together to create a single-page application that manages page structure, navigation, user session management, and the display of API data.
+
+
+# REACT CONTEXT
+
 Bu proje, farklı bileşenleri bir araya getirerek bir React uygulaması oluşturur. Bu bileşenler arasında sayfa gezinmesi, kullanıcı oturum yönetimi ve API çağrıları gibi çeşitli işlevler yer alır. Aşağıda bileşenlerin açıklamaları yer almaktadır:
 
 ## About Bileşeni
